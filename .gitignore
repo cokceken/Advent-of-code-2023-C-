@@ -1,0 +1,7 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/Advent-2023.sln.DotSettings.user
+/.idea
