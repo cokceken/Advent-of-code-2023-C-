@@ -37,7 +37,7 @@ namespace Advent_2023
 
             input = FileHelper.ReadInputFile(day);
             response = step == 1 ? solver.SolveFirst(input) : solver.SolveSecond(input);
-            _testOutputHelper.WriteLine($"\tAnswer for the first step: `{response}`");
+            _testOutputHelper.WriteLine($"\tYour answer: `{response}`");
         }
     }
 }
