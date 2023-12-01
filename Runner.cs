@@ -16,19 +16,19 @@ namespace Advent_2023
         }
 
         [Theory]
-        [InlineData("24000", "45000")]
+        [InlineData("142", "281")]
         public void Day1(string firstAnswer, string secondAnswer)
         {
             var solver = new Day1Solver();
-            SolveWithLogs(solver, 1, 1, firstAnswer);
-            SolveWithLogs(solver, 1, 2, secondAnswer);
+            SolveWithLogs(solver, 1, 1, firstAnswer, true);
+            SolveWithLogs(solver, 1, 2, secondAnswer, true);
         }
 
-        private void SolveWithLogs(ISolver solver, int day, int step, string expectedAnswer)
+        private void SolveWithLogs(ISolver solver, int day, int step, string expectedAnswer, bool isSeparateStepFile = false)
         {
             _testOutputHelper.WriteLine($"Solving day {day} - step {step}");
 
-            var input = FileHelper.ReadSampleFile(day);
+            var input = FileHelper.ReadSampleFile(day, isSeparateStepFile ? step : null);
             var response = step == 1 ? solver.SolveFirst(input) : solver.SolveSecond(input);
 
             Assert.Equal(expectedAnswer, response);

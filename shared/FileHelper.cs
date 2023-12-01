@@ -10,10 +10,11 @@ namespace Advent_2023.shared
                 $"../../../inputs/day-{day}/input.txt"));
         }
 
-        public static string[] ReadSampleFile(int day)
+        public static string[] ReadSampleFile(int day, int? step = null)
         {
+            var filename = step.HasValue ? "sample-" + step : "sample";
             return File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(),
-                $"../../../inputs/day-{day}/sample.txt"));
+                $"../../../inputs/day-{day}/{filename}.txt"));
         }
     }
 }
