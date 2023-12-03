@@ -21,7 +21,7 @@ namespace Advent_2023
         [Theory]
         [InlineData(1, "142", "281", true)]
         [InlineData(2, "8", "2286", false)]
-        [InlineData(3, "", "", false)]
+        [InlineData(3, "4361", "467835", false)]
         public void Run(int day, string firstAnswer, string secondAnswer, bool isSeparateStepFile)
         {
             var solver = _solvers[day - 1];
