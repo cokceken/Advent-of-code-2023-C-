@@ -15,13 +15,14 @@ namespace Advent_2023
         public Runner(ITestOutputHelper testOutputHelper)
         {
             _testOutputHelper = testOutputHelper;
-            _solvers = new ISolver[] { new Day1Solver(), new Day2Solver(), new Day3Solver() };
+            _solvers = new ISolver[] { new Day1Solver(), new Day2Solver(), new Day3Solver(), new Day4Solver() };
         }
 
         [Theory]
         [InlineData(1, "142", "281", true)]
         [InlineData(2, "8", "2286", false)]
         [InlineData(3, "4361", "467835", false)]
+        [InlineData(4, "13", "30", false)]
         public void Run(int day, string firstAnswer, string secondAnswer, bool isSeparateStepFile)
         {
             var solver = _solvers[day - 1];
