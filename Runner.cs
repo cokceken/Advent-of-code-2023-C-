@@ -15,7 +15,11 @@ namespace Advent_2023
         public Runner(ITestOutputHelper testOutputHelper)
         {
             _testOutputHelper = testOutputHelper;
-            _solvers = new ISolver[] { new Day1Solver(), new Day2Solver(), new Day3Solver(), new Day4Solver() };
+            _solvers = new ISolver[]
+                { new Day1Solver(), new Day2Solver(), new Day3Solver(), 
+                    new Day4Solver(), new Day5Solver(), new Day6Solver(),
+                    new Day7Solver(), new Day8Solver()
+                };
         }
 
         [Theory]
@@ -23,6 +27,10 @@ namespace Advent_2023
         [InlineData(2, "8", "2286", false)]
         [InlineData(3, "4361", "467835", false)]
         [InlineData(4, "13", "30", false)]
+        [InlineData(5, "35", "46", false)]
+        [InlineData(6, "288", "71503", false)]
+        [InlineData(7, "6440", "5905", false)]
+        [InlineData(8, "6", "6", true)]
         public void Run(int day, string firstAnswer, string secondAnswer, bool isSeparateStepFile)
         {
             var solver = _solvers[day - 1];
