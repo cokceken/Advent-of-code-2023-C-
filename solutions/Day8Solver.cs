@@ -90,7 +90,7 @@ namespace Advent_2023.solutions
 
             return result;
         }
-
+        
         private static long GreatestCommonFactor(long a, long b)
         {
             while (b != 0)
