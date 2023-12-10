@@ -34,7 +34,7 @@ namespace Advent_2023
         [InlineData(7, "6440", "5905", false)]
         [InlineData(8, "6", "6", true)]
         [InlineData(9, "114", "2", false)]
-        [InlineData(10, "", "", false)]
+        [InlineData(10, "22", "4", false)]
         public void Run(int day, string firstAnswer, string secondAnswer, bool isSeparateStepFile)
         {
             var solver = _solvers[day - 1];
