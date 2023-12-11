@@ -19,7 +19,7 @@ namespace Advent_2023
                 { new Day1Solver(), new Day2Solver(), new Day3Solver(), 
                     new Day4Solver(), new Day5Solver(), new Day6Solver(),
                     new Day7Solver(), new Day8Solver(), new Day9Solver(),
-                    new Day10Solver()
+                    new Day10Solver(), new Day11Solver(),
                 };
         }
         
@@ -35,6 +35,7 @@ namespace Advent_2023
         [InlineData(8, "6", "6", true)]
         [InlineData(9, "114", "2", false)]
         [InlineData(10, "22", "4", false)]
+        [InlineData(11, "374", "82000210", false)]
         public void Run(int day, string firstAnswer, string secondAnswer, bool isSeparateStepFile)
         {
             var solver = _solvers[day - 1];
