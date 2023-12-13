@@ -38,7 +38,7 @@ namespace Advent_2023.solutions
             return result.ToString();
         }
 
-        public static long WaysToSolve(char[] part, int[] conditions, IDictionary<string, long> cache)
+        private static long WaysToSolve(char[] part, int[] conditions, IDictionary<string, long> cache)
         {
             if (!part.Any() && conditions.Any()) return 0;
             if (!conditions.Any())
